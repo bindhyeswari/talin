@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        #test2 {
+            /* 0 1 0 0 */
+            background-color: yellow;
+        }
+
+
+        div.talin {
+            /* 0 0 1 1 */
+            background-color: green;
+        }
+
+        [class=talin] {
+            /* 0 0 1 0 */
+            background-color: blue;
+        }
+
+        div {
+            /* 0 0 0 1 */
+            background-color: #2a3a48;
+            height: 100px;
+            width: 100px;
+            margin: 12px;
+        }
+    </style>
+</head>
+<body>
+    Specificity is more imp than cascade
+    Inline ID Atrribute/Class Element
+    0 0 0 0
+
+
+
+    <div class="talin" id="test2">
+
+    </div>
+    <div>
+
+    </div>
+
+    <ul>
+        <li>
+            <span>
+                some data
+            </span>
+        </li>
+    </ul>
+
+</body>
+</html>

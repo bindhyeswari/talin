@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <input type="file" multiple="multiple"/>
+    Hello World!
+    <a href="javascript:void(0);">Google</a>
+    <button>
+        Print
+    </button>
+    <script src="js/hw.js"></script>
+    <script>
+
+        console.log('Hello World!');
+
+        // creating objects
+
+        var obj = { // Object literal
+            name: 'Talin Vartan'
+        };
+
+
+        var prop = 'name';
+        console.log(obj.name); // . operator
+        console.log(obj[prop]); // associative array notation
+
+        var child = Object.create(null);
+
+        obj.name = 'Mishra';
+        // child.name = 'Ray Hengst';
+        console.log(child.hasOwnProperty('name'));
+        console.log(child.name);
+
+        // Constructor
+        // Car --> Function.prototype --> Object.prototype
+        function Car() {
+
+        }
+
+        Car.name = 'bmw';
+
+        Car.prototype.name = 'BMW';
+
+        // bmw --> Car.prototype --> Object.prototype
+        var bmw = new Car();
+        alert(bmw.name);
+
+
+
+
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        add.sum = 100;
+
+        console.log(typeof add);
+
+
+        function invoker (fn, x, y) {
+            console.log(x);
+            console.log(y);
+            console.log(add.toString());
+            return fn(x, y);
+        }
+
+        var sum = invoker(add, 10, 20);
+
+        console.log(sum);
+
+
+        /*var obj = new Object(); // constructor
+
+        var obj = Object.create(); // ECMA Script 5*/
+
+        var button = document.getElementsByTagName('button')[0];
+
+        /*button.onclick = function () {
+            console.log('Button clicked using onclick!');
+        };
+
+        button.onclick = function () {
+            console.log('Button clicked using onclick 2!');
+        };
+*/
+        button.addEventListener('click', function () {
+            console.log('Button clicked 1!');
+        });
+
+        button.addEventListener('click', function () {
+            console.log('Button clicked 2!');
+        });
+
+    </script>
+</body>
+</html>

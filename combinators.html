@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        span {
+            background-color: green;
+            color: white;
+        }
+
+        div > span {
+            /* 0 0 0 2 */
+            background-color: red;
+        }
+
+        div span {
+            /* 0 0 0 2  */
+            background-color: yellow;
+        }
+
+        li.idx ~ li {
+            font-weight: 600;
+            background-color: red;
+            font-family: 'Courier New';
+        }
+
+        div, span {
+            font-family: 'Helvetica Neue';
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            Nested span
+        </span>
+        <ul>
+            <li><span>Nested within ul > li > span </span></li>
+            <li class="idx">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <span>
+        Independent span
+    </span>
+
+</body>
+</html>

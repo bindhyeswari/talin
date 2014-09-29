@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        // DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.children[0].children[0].children[0].innerHTML = 'Im a span changed by DOMContentLoaded';
+        });
+
+
+       /* window.onload = function () {
+            document.body.children[0].children[0].children[0].innerHTML = 'Im a span changed by the load event';
+        };*/
+
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <span>
+
+            </span>
+        </div>
+    </div>
+</body>
+</html>
